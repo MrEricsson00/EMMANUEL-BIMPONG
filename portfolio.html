@@ -67,6 +67,13 @@
         <p>&copy; 2025 Bimpong Emmanuel. All rights reserved.</p>
     </footer>
 
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="caption"></div>
+    </div>
+
     <script>
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
@@ -74,6 +81,39 @@
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('nav-open');
             hamburger.classList.toggle('open');
+        });
+
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const captionText = document.getElementById('caption');
+        const closeBtn = document.querySelector('.close');
+
+        function openLightbox(src, alt) {
+            lightbox.style.display = 'block';
+            lightboxImg.src = src;
+            captionText.innerHTML = alt;
+        }
+
+        function closeLightbox() {
+            lightbox.style.display = 'none';
+        }
+
+        closeBtn.onclick = closeLightbox;
+
+        lightbox.onclick = function(event) {
+            if (event.target === lightbox) {
+                closeLightbox();
+            }
+        }
+
+        // Make images clickable
+        const images = document.querySelectorAll('.project img');
+        images.forEach(img => {
+            img.style.cursor = 'pointer';
+            img.onclick = function() {
+                openLightbox(this.src, this.alt);
+            };
         });
     </script>
 </body>
