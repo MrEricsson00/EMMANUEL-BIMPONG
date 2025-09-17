@@ -66,7 +66,7 @@ nav .container {
 
 /* Header and Hero */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: url('Profile 1.jpg') center/cover no-repeat;
     color: white;
     text-align: center;
     padding: 120px 20px 100px;
@@ -84,7 +84,7 @@ nav .container {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.3);
+    background: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(102, 126, 234, 0.3) 100%);
     z-index: 1;
 }
 
@@ -147,11 +147,43 @@ section h2::after {
 }
 
 /* About */
-#about p {
-    text-align: center;
-    font-size: 1.2rem;
-    max-width: 800px;
+.about-content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 50px;
+    align-items: center;
+    max-width: 1000px;
     margin: 0 auto;
+}
+
+.about-image {
+    text-align: center;
+}
+
+.profile-img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid white;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.about-text p:first-child {
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 /* Portfolio */
@@ -321,5 +353,20 @@ section {
 
     .project h3 {
         font-size: 1.3rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-text p {
+        font-size: 1rem;
     }
 }
