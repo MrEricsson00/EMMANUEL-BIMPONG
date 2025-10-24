@@ -28,114 +28,164 @@
     <section id="portfolio">
         <div class="container">
             <h2>My Work</h2>
-        <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="branding">Branding</button>
-            <button class="filter-btn" data-filter="product-labeling">Product Labeling</button>
-            <button class="filter-btn" data-filter="photoframe">Photoframe</button>
-            <button class="filter-btn" data-filter="ui-ux">UI/UX Design</button>
-            <button class="filter-btn" data-filter="website-design">Website Design</button>
-        </div>
-            <div class="gallery">
-                <div class="project branding">
-                    <img src="works 1.jpg" alt="Project 1">
-                    <h3>Brand Identity Design</h3>
-                    <p>Complete brand identity package including logo design, color palette, and brand guidelines for a tech startup.</p>
+
+            <!-- Branding Section -->
+            <div class="category-section">
+                <div class="category-header">
+                    <h3>Branding</h3>
+                    <button class="view-btn" data-category="branding">View</button>
                 </div>
-                <div class="project photoframe">
-                    <img src="works 2.jpg" alt="Project 2">
+                <div class="category-gallery" id="branding-gallery" style="display: none;">
+                    <div class="gallery">
+                        <div class="project">
+                            <img src="works 1.jpg" alt="Brand Identity Design">
+                            <h4>Brand Identity Design</h4>
+                            <p>Complete brand identity package including logo design, color palette, and brand guidelines for a tech startup.</p>
+                        </div>
+                        <div class="project">
+                            <img src="works 3.jpg" alt="Print Design Collection">
+                            <h4>Print Design Collection</h4>
+                            <p>Brochure and flyer designs for a local business, focusing on clean typography and visual hierarchy.</p>
+                        </div>
+                        <div class="project">
+                            <img src="Branding 1.jpg" alt="Branding 1">
+                            <h4>Branding Design</h4>
+                            <p>Creative branding solutions for various clients.</p>
+                        </div>
+                        <div class="project">
+                            <img src="Branding 2.jpg" alt="Branding 2">
+                            <h4>Branding Design</h4>
+                            <p>Creative branding solutions for various clients.</p>
+                        </div>
+                        <div class="project">
+                            <img src="Branding 3.jpg" alt="Branding 3">
+                            <h4>Branding Design</h4>
+                            <p>Creative branding solutions for various clients.</p>
+                        </div>
+                        <div class="project">
+                            <img src="Branding 4.jpg" alt="Branding 4">
+                            <h4>Branding Design</h4>
+                            <p>Creative branding solutions for various clients.</p>
+                        </div>
+                        <div class="project">
+                            <img src="Profile 1.jpg" alt="Profile 1">
+                            <h4>Branding Design</h4>
+                            <p>Creative branding solutions for various clients.</p>
+                        </div>
+                        <div class="project">
+                            <img src="Profile 2.jpg" alt="Profile 2">
+                            <h4>Branding Design</h4>
+                            <p>Creative branding solutions for various clients.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Photoframes Section -->
+            <div class="category-section">
+                <div class="category-header">
                     <h3>Photoframes</h3>
-                    <p>Photoframes as birthdays gifts, weddings, citations, etc</p>
+                    <button class="view-btn" data-category="photoframes">View</button>
                 </div>
-                <div class="project branding">
-                    <img src="works 3.jpg" alt="Project 3">
-                    <h3>Print Design Collection</h3>
-                    <p>Brochure and flyer designs for a local business, focusing on clean typography and visual hierarchy.</p>
+                <div class="category-gallery" id="photoframes-gallery" style="display: none;">
+                    <div class="gallery">
+                        <div class="project">
+                            <img src="works 2.jpg" alt="Project 2">
+                            <h4>Photoframes</h4>
+                            <p>Photoframes as birthdays gifts, weddings, citations, etc</p>
+                        </div>
+                        <div class="project">
+                            <img src="Picture Frame 1.jpg" alt="Picture Frame 1">
+                            <h4>Photoframe</h4>
+                            <p>Custom photoframes for special occasions.</p>
+                        </div>
+                        <div class="project">
+                            <img src="Picture Frame 2.jpg" alt="Picture Frame 2">
+                            <h4>Photoframe</h4>
+                            <p>Custom photoframes for special occasions.</p>
+                        </div>
+                        <div class="project">
+                            <img src="Picture Frame 3.jpg" alt="Picture Frame 3">
+                            <h4>Photoframe</h4>
+                            <p>Custom photoframes for special occasions.</p>
+                        </div>
+                        <div class="project">
+                            <img src="picture frame 4.jpg" alt="picture frame 4">
+                            <h4>Photoframe</h4>
+                            <p>Custom photoframes for special occasions.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="project ui-ux">
-                    <img src="UI.jpeg" alt="Project 4">
+            </div>
+
+            <!-- Website Development Section -->
+            <div class="category-section">
+                <div class="category-header">
+                    <h3>Website Development</h3>
+                    <button class="view-btn" data-category="website-development">View</button>
+                </div>
+                <div class="category-gallery" id="website-development-gallery" style="display: none;">
+                    <div class="gallery">
+                        <div class="project">
+                            <img src="website.png" alt="Project 6">
+                            <h4>Website Design</h4>
+                            <p>Custom graphics and illustrations for a corporate website, enhancing visual storytelling.</p>
+                        </div>
+                        <div class="project">
+                            <img src="works 4.png" alt="works 4">
+                            <h4>Website Design</h4>
+                            <p>Modern website designs.</p>
+                        </div>
+                        <div class="project">
+                            <img src="works 5.png" alt="works 5">
+                            <h4>Website Design</h4>
+                            <p>Modern website designs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package Labeling Section -->
+            <div class="category-section">
+                <div class="category-header">
+                    <h3>Package Labeling</h3>
+                    <button class="view-btn" data-category="package-labeling">View</button>
+                </div>
+                <div class="category-gallery" id="package-labeling-gallery" style="display: none;">
+                    <div class="gallery">
+                        <div class="project">
+                            <img src="packaging.png" alt="Project 5">
+                            <h4>Packaging Design</h4>
+                            <p>Product packaging design for a consumer goods brand, emphasizing sustainability and brand recognition.</p>
+                        </div>
+                        <div class="project">
+                            <img src="Package Labeling.jpg" alt="Package Labeling">
+                            <h4>Product Labeling</h4>
+                            <p>Effective product labeling designs.</p>
+                        </div>
+                        <div class="project">
+                            <img src="Package labeling 2.jpg" alt="Package labeling 2">
+                            <h4>Product Labeling</h4>
+                            <p>Effective product labeling designs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UI/UX Design Section -->
+            <div class="category-section">
+                <div class="category-header">
                     <h3>UI/UX Design</h3>
-                    <p>User interface design for a mobile application with focus on user experience and modern design trends.</p>
+                    <button class="view-btn" data-category="ui-ux">View</button>
                 </div>
-                <div class="project product-labeling">
-                    <img src="packaging.png" alt="Project 5">
-                    <h3>Packaging Design</h3>
-                    <p>Product packaging design for a consumer goods brand, emphasizing sustainability and brand recognition.</p>
-                </div>
-                <div class="project website-design">
-                    <img src="website.png" alt="Project 6">
-                    <h3>Website Design</h3>
-                    <p>Custom graphics and illustrations for a corporate website, enhancing visual storytelling.</p>
-                </div>
-                <div class="project branding">
-                    <img src="Branding 1.jpg" alt="Branding 1">
-                    <h3>Branding Design</h3>
-                    <p>Creative branding solutions for various clients.</p>
-                </div>
-                <div class="project branding">
-                    <img src="Branding 2.jpg" alt="Branding 2">
-                    <h3>Branding Design</h3>
-                    <p>Creative branding solutions for various clients.</p>
-                </div>
-                <div class="project branding">
-                    <img src="Branding 3.jpg" alt="Branding 3">
-                    <h3>Branding Design</h3>
-                    <p>Creative branding solutions for various clients.</p>
-                </div>
-                <div class="project branding">
-                    <img src="Branding 4.jpg" alt="Branding 4">
-                    <h3>Branding Design</h3>
-                    <p>Creative branding solutions for various clients.</p>
-                </div>
-                <div class="project branding">
-                    <img src="Profile 1.jpg" alt="Profile 1">
-                    <h3>Branding Design</h3>
-                    <p>Creative branding solutions for various clients.</p>
-                </div>
-                <div class="project branding">
-                    <img src="Profile 2.jpg" alt="Profile 2">
-                    <h3>Branding Design</h3>
-                    <p>Creative branding solutions for various clients.</p>
-                </div>
-                <div class="project product-labeling">
-                    <img src="Package Labeling.jpg" alt="Package Labeling">
-                    <h3>Product Labeling</h3>
-                    <p>Effective product labeling designs.</p>
-                </div>
-                <div class="project product-labeling">
-                    <img src="Package labeling 2.jpg" alt="Package labeling 2">
-                    <h3>Product Labeling</h3>
-                    <p>Effective product labeling designs.</p>
-                </div>
-                <div class="project photoframe">
-                    <img src="Picture Frame 1.jpg" alt="Picture Frame 1">
-                    <h3>Photoframe</h3>
-                    <p>Custom photoframes for special occasions.</p>
-                </div>
-                <div class="project photoframe">
-                    <img src="Picture Frame 2.jpg" alt="Picture Frame 2">
-                    <h3>Photoframe</h3>
-                    <p>Custom photoframes for special occasions.</p>
-                </div>
-                <div class="project photoframe">
-                    <img src="Picture Frame 3.jpg" alt="Picture Frame 3">
-                    <h3>Photoframe</h3>
-                    <p>Custom photoframes for special occasions.</p>
-                </div>
-                <div class="project photoframe">
-                    <img src="picture frame 4.jpg" alt="picture frame 4">
-                    <h3>Photoframe</h3>
-                    <p>Custom photoframes for special occasions.</p>
-                </div>
-                <div class="project website-design">
-                    <img src="works 4.png" alt="works 4">
-                    <h3>Website Design</h3>
-                    <p>Modern website designs.</p>
-                </div>
-                <div class="project website-design">
-                    <img src="works 5.png" alt="works 5">
-                    <h3>Website Design</h3>
-                    <p>Modern website designs.</p>
+                <div class="category-gallery" id="ui-ux-gallery" style="display: none;">
+                    <div class="gallery">
+                        <div class="project">
+                            <img src="UI.jpeg" alt="Project 4">
+                            <h4>UI/UX Design</h4>
+                            <p>User interface design for a mobile application with focus on user experience and modern design trends.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -161,26 +211,21 @@
             hamburger.classList.toggle('open');
         });
 
-        // Filter functionality
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const projects = document.querySelectorAll('.project');
+        // View button functionality
+        const viewButtons = document.querySelectorAll('.view-btn');
 
-        filterButtons.forEach(button => {
+        viewButtons.forEach(button => {
             button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
-                button.classList.add('active');
+                const category = button.getAttribute('data-category');
+                const gallery = document.getElementById(category + '-gallery');
 
-                const filterValue = button.getAttribute('data-filter');
-
-                projects.forEach(project => {
-                    if (filterValue === 'all' || project.classList.contains(filterValue)) {
-                        project.style.display = 'block';
-                    } else {
-                        project.style.display = 'none';
-                    }
-                });
+                if (gallery.style.display === 'none' || gallery.style.display === '') {
+                    gallery.style.display = 'block';
+                    button.textContent = 'Hide';
+                } else {
+                    gallery.style.display = 'none';
+                    button.textContent = 'View';
+                }
             });
         });
 
@@ -208,7 +253,7 @@
             }
         }
 
-        // Make images clickable
+        // Make images clickable for lightbox
         const images = document.querySelectorAll('.project img');
         images.forEach(img => {
             img.style.cursor = 'pointer';

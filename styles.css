@@ -219,37 +219,54 @@ section h2::after {
     font-weight: 500;
 }
 
-/* Filter Buttons */
-.filter-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 50px;
+/* Category Sections */
+.category-section {
+    margin-bottom: 60px;
+    border-bottom: 1px solid #e1e5e9;
+    padding-bottom: 40px;
 }
 
-.filter-btn {
-    background: #f0f0f0;
+.category-section:last-child {
+    border-bottom: none;
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.category-header h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
     color: #333;
+    margin: 0;
+}
+
+.view-btn {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
     border: none;
-    padding: 12px 24px;
+    padding: 12px 30px;
     border-radius: 25px;
     font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: 'Montserrat', sans-serif;
-}
-
-.filter-btn:hover {
-    background: #667eea;
-    color: white;
-}
-
-.filter-btn.active {
-    background: #667eea;
-    color: white;
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.view-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.category-gallery {
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 /* Portfolio */
 .gallery {
@@ -283,7 +300,7 @@ section h2::after {
     transform: scale(1.05);
 }
 
-.project h3 {
+.project h3, .project h4 {
     padding: 25px 25px 10px;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.4rem;
