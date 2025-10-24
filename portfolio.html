@@ -28,36 +28,114 @@
     <section id="portfolio">
         <div class="container">
             <h2>My Work</h2>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="branding">Branding</button>
+            <button class="filter-btn" data-filter="product-labeling">Product Labeling</button>
+            <button class="filter-btn" data-filter="photoframe">Photoframe</button>
+            <button class="filter-btn" data-filter="ui-ux">UI/UX Design</button>
+            <button class="filter-btn" data-filter="website-design">Website Design</button>
+        </div>
             <div class="gallery">
-                <div class="project">
+                <div class="project branding">
                     <img src="works 1.jpg" alt="Project 1">
                     <h3>Brand Identity Design</h3>
                     <p>Complete brand identity package including logo design, color palette, and brand guidelines for a tech startup.</p>
                 </div>
-                <div class="project">
+                <div class="project photoframe">
                     <img src="works 2.jpg" alt="Project 2">
                     <h3>Photoframes</h3>
                     <p>Photoframes as birthdays gifts, weddings, citations, etc</p>
                 </div>
-                <div class="project">
+                <div class="project branding">
                     <img src="works 3.jpg" alt="Project 3">
                     <h3>Print Design Collection</h3>
                     <p>Brochure and flyer designs for a local business, focusing on clean typography and visual hierarchy.</p>
                 </div>
-                <div class="project">
+                <div class="project ui-ux">
                     <img src="UI.jpeg" alt="Project 4">
                     <h3>UI/UX Design</h3>
                     <p>User interface design for a mobile application with focus on user experience and modern design trends.</p>
                 </div>
-                <div class="project">
+                <div class="project product-labeling">
                     <img src="packaging.png" alt="Project 5">
                     <h3>Packaging Design</h3>
                     <p>Product packaging design for a consumer goods brand, emphasizing sustainability and brand recognition.</p>
                 </div>
-                <div class="project">
+                <div class="project website-design">
                     <img src="website.png" alt="Project 6">
-                    <h3>Website Graphics</h3>
+                    <h3>Website Design</h3>
                     <p>Custom graphics and illustrations for a corporate website, enhancing visual storytelling.</p>
+                </div>
+                <div class="project branding">
+                    <img src="Branding 1.jpg" alt="Branding 1">
+                    <h3>Branding Design</h3>
+                    <p>Creative branding solutions for various clients.</p>
+                </div>
+                <div class="project branding">
+                    <img src="Branding 2.jpg" alt="Branding 2">
+                    <h3>Branding Design</h3>
+                    <p>Creative branding solutions for various clients.</p>
+                </div>
+                <div class="project branding">
+                    <img src="Branding 3.jpg" alt="Branding 3">
+                    <h3>Branding Design</h3>
+                    <p>Creative branding solutions for various clients.</p>
+                </div>
+                <div class="project branding">
+                    <img src="Branding 4.jpg" alt="Branding 4">
+                    <h3>Branding Design</h3>
+                    <p>Creative branding solutions for various clients.</p>
+                </div>
+                <div class="project branding">
+                    <img src="Profile 1.jpg" alt="Profile 1">
+                    <h3>Branding Design</h3>
+                    <p>Creative branding solutions for various clients.</p>
+                </div>
+                <div class="project branding">
+                    <img src="Profile 2.jpg" alt="Profile 2">
+                    <h3>Branding Design</h3>
+                    <p>Creative branding solutions for various clients.</p>
+                </div>
+                <div class="project product-labeling">
+                    <img src="Package Labeling.jpg" alt="Package Labeling">
+                    <h3>Product Labeling</h3>
+                    <p>Effective product labeling designs.</p>
+                </div>
+                <div class="project product-labeling">
+                    <img src="Package labeling 2.jpg" alt="Package labeling 2">
+                    <h3>Product Labeling</h3>
+                    <p>Effective product labeling designs.</p>
+                </div>
+                <div class="project photoframe">
+                    <img src="Picture Frame 1.jpg" alt="Picture Frame 1">
+                    <h3>Photoframe</h3>
+                    <p>Custom photoframes for special occasions.</p>
+                </div>
+                <div class="project photoframe">
+                    <img src="Picture Frame 2.jpg" alt="Picture Frame 2">
+                    <h3>Photoframe</h3>
+                    <p>Custom photoframes for special occasions.</p>
+                </div>
+                <div class="project photoframe">
+                    <img src="Picture Frame 3.jpg" alt="Picture Frame 3">
+                    <h3>Photoframe</h3>
+                    <p>Custom photoframes for special occasions.</p>
+                </div>
+                <div class="project photoframe">
+                    <img src="picture frame 4.jpg" alt="picture frame 4">
+                    <h3>Photoframe</h3>
+                    <p>Custom photoframes for special occasions.</p>
+                </div>
+                <div class="project website-design">
+                    <img src="works 4.png" alt="works 4">
+                    <h3>Website Design</h3>
+                    <p>Modern website designs.</p>
+                </div>
+                <div class="project website-design">
+                    <img src="works 5.png" alt="works 5">
+                    <h3>Website Design</h3>
+                    <p>Modern website designs.</p>
                 </div>
             </div>
         </div>
@@ -81,6 +159,29 @@
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('nav-open');
             hamburger.classList.toggle('open');
+        });
+
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projects = document.querySelectorAll('.project');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                projects.forEach(project => {
+                    if (filterValue === 'all' || project.classList.contains(filterValue)) {
+                        project.style.display = 'block';
+                    } else {
+                        project.style.display = 'none';
+                    }
+                });
+            });
         });
 
         // Lightbox functionality
